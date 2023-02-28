@@ -1,0 +1,14 @@
+*.ipynb_checkpoints
+*.db
+*.tsv
+*.txt
+*.ppt
+*.pptx
+*.csv
+*.PNG
+*.cpg
+*.dbf
+*.prj
+*.qpj
+*.shp
+*.shx
