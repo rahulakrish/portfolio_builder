@@ -105,7 +105,7 @@ The code also checks to see if the investment is not sufficient:
 
 ```
 ├── README.md
+├── notebook.ipynb
 ├── notebook.pdf
-├── presentation.pdf
-├── project.ipynb 
+├── presentation.pdf 
 └── repo.pdf
