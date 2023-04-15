@@ -89,4 +89,17 @@ The code also checks to see if the investment is not sufficient:
 2. Looking at the stock market in general, there was a drastic spike around 2020.
    There has not been a decline to pre-2020 levels and hence, it might be prudent to collect past data only
    from 2020 onwards rather than from all the way back to 2017.
+   
+   ## More Information
+ - [Notebook](notebook.ipynb)
+ - [Presentation](presentation.pdf)
+
+## Repository Structure
+
+```
+├── README.md
+├── notebook.pdf
+├── presentation.pdf
+├── project.ipynb 
+└── repo.pdf
 
