@@ -41,6 +41,13 @@ Example shown is for Apple('AAPL'). The same can be applied for any company of t
 
 ![image](https://user-images.githubusercontent.com/108379254/232229457-5ac85d88-23f9-40b0-a0f7-ed965bff4f36.png)
 
+##Observations:
+
+1. Stock Performance: Stock is generally on an upward trend.
+2. Beta Value : Less than 1.0 signifying that it is low-risk.
+3. P/E ration : Around 30 highlighting that it is over valued. Perhaps it would be better to wait for the p/e to come down.
+4. Dividend: Like the stock price, is on an upward trend. A nice boost to the shareholders for investing in the company.
+
 
 # Time Series Modelling
 
