@@ -72,3 +72,21 @@ The code also checks to see if the investment is not sufficient:
 
 ![image](https://user-images.githubusercontent.com/108379254/232229697-e5a57c45-bcaa-4c9b-8829-63bb676873f7.png)
 
+# Conclusions
+
+## Limitations
+
+1. All the models are purely mathematical models and cannot take into account black swan events.
+2. More sophisticated models using Deep Learning can be built to get more accurate forecasts.
+3. Dividend data is not incorporated while calculating overall returns.
+4. Currently, the invested amount is distributed equally amongst all the stocks.
+   The amounts can be tuned based on the investor's appetite for risk.
+   
+ ## Recommendations
+ 
+ 1. By plugging in amounts and companies in the model, the investor can play around and maximize his/her returns.
+
+2. Looking at the stock market in general, there was a drastic spike around 2020.
+   There has not been a decline to pre-2020 levels and hence, it might be prudent to collect past data only
+   from 2020 onwards rather than from all the way back to 2017.
+
