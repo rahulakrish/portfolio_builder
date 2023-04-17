@@ -104,8 +104,8 @@ The code also checks to see if the investment is sufficient:
 ## Repository Structure
 
 ```
+├── code
+├── .gitignore
 ├── README.md
-├── notebook.ipynb
-├── notebook.pdf
-├── presentation.pdf 
-└── repo.pdf
+├── environment.yml 
+└── presentation.pdf
