@@ -65,19 +65,20 @@ Predicting the price of Apple stock for the next year:
 ![image](https://user-images.githubusercontent.com/108379254/232229544-be67df58-0628-4692-835b-2994398a571e.png)
 
 
-# Portfolio
-If an investor is chooses to invest only in the automotive companies, here's what that would look like:
+# Building a Portfolio - Diversify, Diversify , Diversify
+If an investor wants to ride the recent wave of EV vehicle hype, here's what investing into the leading proponents would look like:
 
 ![image](https://user-images.githubusercontent.com/108379254/232229573-5ccce38b-364c-4116-9987-fa94f91d4623.png)
 
-
 The investor can expect to lose money if he/she were to invest $1000 in Tesla,GM and Ford in the next year.
 
-Now, let's diversify and choose companies from different sectors:automotive,tech and health care
+Now, if the investor were to diversify and choose companies from different sectors instead, here's what that would look like:  
+Sectors: automotive,tech and health care
 
 ![image](https://user-images.githubusercontent.com/108379254/232229602-47e2020c-abf5-4d8c-b2fb-9b64fa75524c.png)
 
 Thus, it is clear to see the benefit of diversification.
+It is also imperative to take emotions out of the decision making process and only look at hard facts.
 
 The code also checks to see if the investment is sufficient:
 
