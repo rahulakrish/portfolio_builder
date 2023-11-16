@@ -1,0 +1,1480 @@
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Business-Objective" data-toc-modified-id="Business-Objective-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Business Objective</a></span></li><li><span><a href="#Methodology" data-toc-modified-id="Methodology-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Methodology</a></span></li><li><span><a href="#EDA" data-toc-modified-id="EDA-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>EDA</a></span><ul class="toc-item"><li><span><a href="#Stock-performance" data-toc-modified-id="Stock-performance-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Stock performance</a></span></li><li><span><a href="#Stock-Returns" data-toc-modified-id="Stock-Returns-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Stock Returns</a></span><ul class="toc-item"><li><span><a href="#Average-returns" data-toc-modified-id="Average-returns-3.2.1"><span class="toc-item-num">3.2.1&nbsp;&nbsp;</span>Average returns</a></span><ul class="toc-item"><li><span><a href="#Interpretation-of-Average-Return" data-toc-modified-id="Interpretation-of-Average-Return-3.2.1.1"><span class="toc-item-num">3.2.1.1&nbsp;&nbsp;</span>Interpretation of Average Return</a></span></li></ul></li><li><span><a href="#Cumulative-returns" data-toc-modified-id="Cumulative-returns-3.2.2"><span class="toc-item-num">3.2.2&nbsp;&nbsp;</span>Cumulative returns</a></span><ul class="toc-item"><li><span><a href="#Interpreting-individual-cumulative-return" data-toc-modified-id="Interpreting-individual-cumulative-return-3.2.2.1"><span class="toc-item-num">3.2.2.1&nbsp;&nbsp;</span>Interpreting individual cumulative return</a></span></li></ul></li><li><span><a href="#Portfolio-Cumulative-Return" data-toc-modified-id="Portfolio-Cumulative-Return-3.2.3"><span class="toc-item-num">3.2.3&nbsp;&nbsp;</span>Portfolio Cumulative Return</a></span><ul class="toc-item"><li><span><a href="#Interpreting-Cumulative-Returns" data-toc-modified-id="Interpreting-Cumulative-Returns-3.2.3.1"><span class="toc-item-num">3.2.3.1&nbsp;&nbsp;</span>Interpreting Cumulative Returns</a></span></li></ul></li><li><span><a href="#P/E-ratio" data-toc-modified-id="P/E-ratio-3.2.4"><span class="toc-item-num">3.2.4&nbsp;&nbsp;</span>P/E ratio</a></span></li><li><span><a href="#Dividend-History" data-toc-modified-id="Dividend-History-3.2.5"><span class="toc-item-num">3.2.5&nbsp;&nbsp;</span>Dividend History</a></span></li><li><span><a href="#Risk" data-toc-modified-id="Risk-3.2.6"><span class="toc-item-num">3.2.6&nbsp;&nbsp;</span>Risk</a></span><ul class="toc-item"><li><span><a href="#Beta-value-of-each-stock" data-toc-modified-id="Beta-value-of-each-stock-3.2.6.1"><span class="toc-item-num">3.2.6.1&nbsp;&nbsp;</span>Beta value of each stock</a></span></li><li><span><a href="#Portfolio-Risk" data-toc-modified-id="Portfolio-Risk-3.2.6.2"><span class="toc-item-num">3.2.6.2&nbsp;&nbsp;</span>Portfolio Risk</a></span></li><li><span><a href="#Interpreting-risk" data-toc-modified-id="Interpreting-risk-3.2.6.3"><span class="toc-item-num">3.2.6.3&nbsp;&nbsp;</span>Interpreting risk</a></span></li><li><span><a href="#Viewing-returns" data-toc-modified-id="Viewing-returns-3.2.6.4"><span class="toc-item-num">3.2.6.4&nbsp;&nbsp;</span>Viewing returns</a></span></li></ul></li></ul></li><li><span><a href="#Modern-Portfolio-Theory" data-toc-modified-id="Modern-Portfolio-Theory-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Modern Portfolio Theory</a></span><ul class="toc-item"><li><span><a href="#PyPortfolioOpt" data-toc-modified-id="PyPortfolioOpt-3.3.1"><span class="toc-item-num">3.3.1&nbsp;&nbsp;</span>PyPortfolioOpt</a></span></li><li><span><a href="#Efficient-Frontier" data-toc-modified-id="Efficient-Frontier-3.3.2"><span class="toc-item-num">3.3.2&nbsp;&nbsp;</span>Efficient Frontier</a></span><ul class="toc-item"><li><span><a href="#Efficient-Frontier-for-Max-Sharpe" data-toc-modified-id="Efficient-Frontier-for-Max-Sharpe-3.3.2.1"><span class="toc-item-num">3.3.2.1&nbsp;&nbsp;</span>Efficient Frontier for Max Sharpe</a></span></li><li><span><a href="#Efficient-Frontier-for-Min-Volatility" data-toc-modified-id="Efficient-Frontier-for-Min-Volatility-3.3.2.2"><span class="toc-item-num">3.3.2.2&nbsp;&nbsp;</span>Efficient Frontier for Min Volatility</a></span></li></ul></li><li><span><a href="#How-to-optimally-allocate-the-money-based-on-the-weights?" data-toc-modified-id="How-to-optimally-allocate-the-money-based-on-the-weights?-3.3.3"><span class="toc-item-num">3.3.3&nbsp;&nbsp;</span>How to optimally allocate the money based on the weights?</a></span><ul class="toc-item"><li><span><a href="#Max-Sharpe" data-toc-modified-id="Max-Sharpe-3.3.3.1"><span class="toc-item-num">3.3.3.1&nbsp;&nbsp;</span>Max Sharpe</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#need-to-create-a-df-for-allocation-and-figure-out-a-way-to-get-the-multiple-index-df-to-sum-it-up" data-toc-modified-id="need-to-create-a-df-for-allocation-and-figure-out-a-way-to-get-the-multiple-index-df-to-sum-it-up-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>need to create a df for allocation and figure out a way to get the multiple index df to sum it up</a></span><ul class="toc-item"><li><ul class="toc-item"><li><ul class="toc-item"><li><span><a href="#Min-Volatility" data-toc-modified-id="Min-Volatility-4.0.0.1"><span class="toc-item-num">4.0.0.1&nbsp;&nbsp;</span>Min Volatility</a></span></li></ul></li></ul></li><li><span><a href="#Future-price-prediction---Time-Series-Modeling" data-toc-modified-id="Future-price-prediction---Time-Series-Modeling-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Future price prediction - Time Series Modeling</a></span><ul class="toc-item"><li><span><a href="#Stationarity-Check" data-toc-modified-id="Stationarity-Check-4.1.1"><span class="toc-item-num">4.1.1&nbsp;&nbsp;</span>Stationarity Check</a></span></li><li><span><a href="#Convert-non-stationary-to-stationary" data-toc-modified-id="Convert-non-stationary-to-stationary-4.1.2"><span class="toc-item-num">4.1.2&nbsp;&nbsp;</span>Convert non-stationary to stationary</a></span></li><li><span><a href="#ARIMA-model" data-toc-modified-id="ARIMA-model-4.1.3"><span class="toc-item-num">4.1.3&nbsp;&nbsp;</span>ARIMA model</a></span><ul class="toc-item"><li><span><a href="#ACF-and-PACF" data-toc-modified-id="ACF-and-PACF-4.1.3.1"><span class="toc-item-num">4.1.3.1&nbsp;&nbsp;</span>ACF and PACF</a></span></li><li><span><a href="#setting-up-the-ARIMA-model" data-toc-modified-id="setting-up-the-ARIMA-model-4.1.3.2"><span class="toc-item-num">4.1.3.2&nbsp;&nbsp;</span>setting up the ARIMA model</a></span></li></ul></li><li><span><a href="#SARIMA-model" data-toc-modified-id="SARIMA-model-4.1.4"><span class="toc-item-num">4.1.4&nbsp;&nbsp;</span>SARIMA model</a></span></li><li><span><a href="#Facebook-Prophet" data-toc-modified-id="Facebook-Prophet-4.1.5"><span class="toc-item-num">4.1.5&nbsp;&nbsp;</span>Facebook Prophet</a></span><ul class="toc-item"><li><span><a href="#Regularization" data-toc-modified-id="Regularization-4.1.5.1"><span class="toc-item-num">4.1.5.1&nbsp;&nbsp;</span>Regularization</a></span></li></ul></li><li><span><a href="#Model-performance-comparisions" data-toc-modified-id="Model-performance-comparisions-4.1.6"><span class="toc-item-num">4.1.6&nbsp;&nbsp;</span>Model performance comparisions</a></span></li><li><span><a href="#Using-Prophet-to-get-forecast-of-'AAPL'-for-the-next-year" data-toc-modified-id="Using-Prophet-to-get-forecast-of-'AAPL'-for-the-next-year-4.1.7"><span class="toc-item-num">4.1.7&nbsp;&nbsp;</span>Using Prophet to get forecast of 'AAPL' for the next year</a></span></li></ul></li><li><span><a href="#Building-Portfolio" data-toc-modified-id="Building-Portfolio-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Building Portfolio</a></span><ul class="toc-item"><li><span><a href="#Predictions-of-chosen-stock" data-toc-modified-id="Predictions-of-chosen-stock-4.2.1"><span class="toc-item-num">4.2.1&nbsp;&nbsp;</span>Predictions of chosen stock</a></span></li><li><span><a href="#Predictions-of-portfolio" data-toc-modified-id="Predictions-of-portfolio-4.2.2"><span class="toc-item-num">4.2.2&nbsp;&nbsp;</span>Predictions of portfolio</a></span></li></ul></li><li><span><a href="#Conclusions" data-toc-modified-id="Conclusions-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Conclusions</a></span><ul class="toc-item"><li><span><a href="#Limitations" data-toc-modified-id="Limitations-4.3.1"><span class="toc-item-num">4.3.1&nbsp;&nbsp;</span>Limitations</a></span></li><li><span><a href="#Recommendations" data-toc-modified-id="Recommendations-4.3.2"><span class="toc-item-num">4.3.2&nbsp;&nbsp;</span>Recommendations</a></span></li></ul></li></ul></li></ul></div>
+
+# Business Objective
+
+To help the average investor build a portfolio of stock and ensure maximum returns.
+
+The assumption here is that the investor already has an idea companies they want to invest in. The aim here is to  provide the investor an overview of the company performance and make predictions on future thereby helping them decide it it's worth their investment. Since the model is purely mathematical and cannot take into account black swan events, the onus still lies on the investor to look at a company holistically before taking the plunge.
+
+I will also focus on diversification, a core tenet of a good investment strategy i.e by investing in companies across different sectors, the investor can minimize their risk and maximize returns.
+
+# Methodology
+
+1. Data of the chosen stock from 2017-2022 will be scraped from [Yahoo Finance](<a href="https://urldefense.com/v3/__https://finance.yahoo.com/__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNR6_em1Jw$">https://finance.yahoo.com/</a>)  using python's  `yfinance`(documentation can be found [here](<a href="https://urldefense.com/v3/__https://aroussi.com/post/python-yahoo-finance__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNTa0FgHWQ$">https://aroussi.com/post/python-yahoo-finance</a>)) and `YahooFinancials` (documentation can be found [here](<a href="https://urldefense.com/v3/__https://pypi.org/project/yahoofinancials/__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNQhk-zFwQ$">https://pypi.org/project/yahoofinancials/</a>)).
+
+2. Using the data, 4 commonly used metrics to evaluate a stock will be plotted: ***returns, beta ratio, p/e ratio and dividend***
+
+3. Different machine learning models will then be built to predict future stock price. Their errors will be compared and the model with the least error will be used gage future stock performance.
+
+4. Combined with stock performance and forecast information, then by feeding the chosen stock into the portfolio builder, the investor can look at combined returns and decide which portfolio is best-aligned with his/her goals.
+
+
+
+pip install yahoofinancials
+
+#importing libraries
+
+import yfinance as yf
+from yahoofinancials import YahooFinancials
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('darkgrid')
+%matplotlib inline
+import numpy as np
+import pandas as pd
+import itertools
+from datetime import datetime
+from datetime import date
+from dateutil import relativedelta
+from sklearn.metrics import mean_squared_error
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import TimeSeriesSplit
+from statsmodels.tsa.stattools import adfuller
+from scipy.signal._signaltools import _centered
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from prophet import Prophet
+import warnings
+warnings.filterwarnings('ignore')
+import logging
+import cmdstanpy
+logging.basicConfig(level=logging.CRITICAL)
+mlogger = logging.getLogger('matplotlib')
+mlogger.setLevel(logging.WARNING)
+logging.getLogger('cmdstanpy').setLevel('WARNING')
+
+# EDA
+
+Stock data for analysis and modeling will be collected from 2019-till date.
+
+To make preliminary calculations of portfolio perfomance, let's assume an equally weighted portfolio i.e. 25% investement in 4 different assets.
+
+# define dates
+start_date = '2019-01-01'
+end_date = date.today()
+
+#sample weights for portfolio returns calculations
+weights = np.array([0.25,0.25,0.25,0.25])
+
+The following is a function to collect data of the S&P 500 which represents the overall market. We will be using this as a benchmark for portfolio performance.
+
+#function to get sp_500 data to be used for comparision
+def sp_500():
+  sp_500 = yf.download('^GSPC',start=start_date,end=end_date)
+  sp_500 = sp_500[['Adj Close']]
+  sp_500['daily_returns'] = sp_500['Adj Close'].pct_change()
+  return sp_500
+
+sp_500 = sp_500()
+# sp_500.head(2)
+
+def stocks(string):
+  portfolio = list(string.split(','))
+
+  #get stock prices for the specified date ranges for stocks in the portfolio
+  portfolio_df = yf.download(portfolio,start=start_date,end=end_date)
+  #using only the adj close
+  portfolio_df = portfolio_df[['Adj Close']]
+  #renaming the columns
+  portfolio_df.columns = portfolio
+
+  return portfolio,portfolio_df
+
+
+portfolio,portfolio_df= stocks('GE,JPM,MSFT,PG')
+
+portfolio_df
+
+## Stock performance
+
+Building a portfolio using General Electric, JP Morgan and Procter & Gamble:
+
+#function to get stock data for each stock in the portfolio
+def stock_performance(portfolio):
+  fig,ax = plt.subplots(figsize=(12,8))
+
+#plot the stock price over the years
+  ax.plot(portfolio_df,label=portfolio);
+  ax.set_title(f'Stock Price from 2019 till date')
+  ax.legend();
+
+stock_performance(portfolio)
+
+# def stock_info(ticker):
+#     #get stock prices for the specified date ranges
+#     df = yf.download(ticker,start=start_date,end=end_date)
+#     #plot the stock price over the years
+#     fig,ax = plt.subplots(figsize=(10,5))
+#     ax.plot(df['Adj Close']);
+#     ax.set_title(f'Stock Price of {ticker} from 2019 till date')
+
+## Stock Returns
+
+### Average returns
+
+1. This gives you the mean performance over a period of time.
+
+2. The average return is the simple mathematical average of a series of returns generated over a specified period of time. An average return is calculated the same way that a simple average is calculated for any set of numbers.
+
+3. So, just by taking the mean of the pct change, we can calculate the average return.
+
+
+def get_average_return(portfolio):
+
+  #getting the  retuns using pct_change
+  returns = portfolio_df.pct_change()
+
+  #mean of the daily returns
+  meanDailyReturns=returns.mean()
+
+  # #sample weights
+  # weights = np.array([0.25,0.25,0.25,0.25])
+
+  #to get the average return of the portfolio, multiply the mean of daily returns by the weights and take the sum
+  portReturn = round(np.sum(meanDailyReturns*weights) *100,2)
+  # print(f'Average Return of portfolio calculated daily: {portReturn} %')
+
+  #comparing portfolio performace with overall market performance
+  #using ^GSPC to capture the S&P 500 and calculating cumulative returns similarly
+  # sp_500 = yf.download('^GSPC',start=start_date,end=end_date)
+  # sp_500 = sp_500[['Adj Close']]
+  # sp_500['daily_returns'] = sp_500['Adj Close'].pct_change()
+
+  sp_500_meanDailyReturns = round(sp_500['daily_returns'].mean(),4)*100
+  # print(f'Average Return of the S&P 500 calulated daily: {sp_500_meanDailyReturns}%')
+
+  avg_return = {'portReturn':portReturn,
+                'sp500_return':sp_500_meanDailyReturns}
+  avg_return_df = pd.DataFrame(avg_return,index=['Average Daily Return'])
+  avg_return_df.plot(kind='bar',rot=0,title='Average Daily Return Comparision %');
+
+get_average_return(portfolio)
+
+#### Interpretation of Average Return
+
+A 0.08% average return means that, on average, the portfolio has grown by 0.08% for each unit of time, in this case, per day from 2019 till date.
+Compared to the average return of the S&P 500 which has grown 0.05% per day over the same time period.
+
+### Cumulative returns
+
+1. Allows you to track portfolio performance over time
+2. Just like with interest in your bank account, the cumulative performance gives you the compounded return at each date in your dataset. It tells you; "up until today, this is what the total return has been since the start."
+3. Better understood, by plotting a hypothetical growth of $1000 over time.
+
+def get_ind_cumulative_return(portfolio):
+
+  #getting the  retuns using pct_change
+  returns = portfolio_df.pct_change()
+
+  #calculate the umulatve returns for each stock in the portfolio
+  daily_cum_returns = (returns+1).cumprod()
+
+  #multiply the cumulative return by 1000 get get hypothetical growth
+  total_cum_returns = 1000*daily_cum_returns
+
+  #plot the cumulative return
+  fig,ax = plt.subplots(figsize=(12,7));
+  ax.plot(total_cum_returns,label=portfolio);
+  ax.set_title('Hypothetical Growth of $1000');
+  ax.legend();
+
+get_ind_cumulative_return(portfolio)
+
+#### Interpreting individual cumulative return
+
+For MSFT, we can see that \\$1000 invested in 2019 would've grown to approx. $3600, netting a cumulative return of approx. 260%!
+
+### Portfolio Cumulative Return
+
+Now that we've seen how the individual stocks have performed over time, similarly, we now have to see how a portfolio of these socks would've performed. We can also benchmark portfolio performance against the S&P 500 which represents the overall market.
+
+def get_portfolio_cumulative_return(portfolio):
+  #set a smaple allocation to calculate portfolio return. setting 25% of the investment for each stock
+  # weights = [0.25,0.25,0.25,0.25]
+
+  #getting the  retuns using pct_change
+  returns = portfolio_df.pct_change()
+
+  #calculate daily cumulative return for the portfolio by taking the dot product
+  # for eg: first row: (0.099*0.25) + (0.01519*0.25) + (-0.041*0.5) = -0.0493
+  #this way you calulate daily cumulative return
+  portfolio_returns = returns.dot(weights)
+
+  # from the daily cumulative returns, you calculate total cumulative return
+  portfolio_cum_returns = (1+portfolio_returns).cumprod()
+
+  #multiply the cumulative return by 1000 get get hypothetical growth
+  portfolio_cum_returns['growth'] = portfolio_cum_returns*1000
+
+  # calculate the cumulative returns of the S&P 500 for comparision
+  # sp_500 = yf.download('^GSPC',start=start_date,end=end_date)
+  # sp_500 = sp_500[['Adj Close']]
+  sp_500['daily_returns'] = sp_500['Adj Close'].pct_change()
+  sp_500['cum_returns'] = (1+sp_500['daily_returns']).cumprod()
+  sp_500['growth'] =sp_500['cum_returns']*1000
+
+  #plotting returns
+  fig,ax = plt.subplots(figsize=(12,7))
+  ax.plot(portfolio_cum_returns['growth'],label='portfolio returns')
+  ax.plot(sp_500['growth'], label = 'S&P 500')
+  ax.set_title('Portfolio Performance vs S&P 500');
+  ax.legend();
+
+
+get_portfolio_cumulative_return(portfolio)
+
+#### Interpreting Cumulative Returns
+
+From the graph, we can see that the cumulative return of the portfolio is approx. \$2500.
+This means an initial investment of \$1000 would've grown to $2500. In terms of percentage, that equates to 150%.
+The S&P 500 in comparison has grown only 75%.
+
+# #function to calculate stock return
+
+# def stock_return(ticker):
+#     #get stock prices for the specified date ranges
+#     df = yf.download(ticker,start=start_date,end=end_date)
+#     df_return = df[['Adj Close']]
+#     df_return['pct_change'] = df_return['Adj Close'].pct_change(14) # use pct change to calculate the diff
+
+#     #plot the returns over 5 years
+#     fig,ax = plt.subplots(figsize=(10,5))
+#     ax.plot(df_return['pct_change'],label= 'AAPL');
+#     ax.legend(loc='best');
+#     ax.set_title('14 day percent change')
+
+
+### P/E ratio
+
+Price-to-Earnings(P/E) ratio is a metric that compares a company's share price to it's earnings per share. It helps an investor
+determine whether a stock is undervalued or overvalued. Hence, if a stock is overvalued, then the investor is paying more for the stock and betting on future growth and vice-versa.
+
+# #function to get historical PE ratios
+
+def get_pe_ratio(ticker):
+
+    #get financial statement of ticker using yahoofinancials
+    financials = YahooFinancials(ticker)
+    statement = financials.get_financial_stmts('annual', 'income', reformat=True)
+
+    #create a dict of the income statement alone
+    dicts ={}
+    for i in statement['incomeStatementHistory'][ticker]:
+        dicts.update(i)
+
+    #create a dataframe for easy use
+    df = pd.DataFrame(dicts)
+    df = df.T
+    df['dilutedAverageShares'].fillna(df['dilutedAverageShares'].median(),inplace=True)
+
+    #calculate pe ratio
+    eps = df['netIncomeContinuousOperations']/df['dilutedAverageShares'] #calc earnings per share
+    eps_df = pd.DataFrame(eps,index=df.index,columns=['EPS'])
+    eps_df['PE ratio'] = financials.get_current_price()/eps_df['EPS']#get current price and calc pe ratio
+
+    #plot result
+    fig,ax=plt.subplots(figsize=(5,5));
+    ax.plot(eps_df['PE ratio'],marker = '*', markerfacecolor = 'black')
+    ax.set_title(f'Historical PE ratio: {ticker}')
+    ax.set_ylabel('PE ratio')
+
+# for stock in portfolio:
+#   get_pe_ratio(stock)
+
+### Dividend History
+
+A Dividend is the distirbution's of the company's profit to it's shareholders. Not every company pays dividends. Companies can also choose to re-invest their profits for future growth than reward shareholders. For an investor, investing in a company that pays dividends is an easy way to earn extra income on top of their initial investment.
+
+#function to get historical dividend data
+
+def get_dividend(ticker):
+
+    #get dividend data
+    financials = YahooFinancials(ticker)
+    div = financials.get_daily_dividend_data(start_date=start_date,end_date='2022-12-31')
+
+    #check if the company pays dividends
+    if div[ticker] == None:
+        fig,ax = plt.subplots(figsize=(5,5))
+        ax.annotate(f'Sorry, {ticker} does not offer dividends',xy=(0.3,0.5),fontsize=20);
+        ax.axis('off')
+
+    else:#if company does pay dividends,then convert to a df and create a plot
+        df = pd.DataFrame(div[ticker])
+        df.drop('date',axis=1,inplace=True)
+        df.rename(columns={'formatted_date':'date'},inplace=True)
+        df['date'] = pd.to_datetime(df['date'])
+        df.set_index('date',inplace=True)
+        fig,ax=plt.subplots(figsize=(5,5))
+        ax.plot(df['amount']);
+        ax.set_title(f'Dividend rate: {ticker}');
+        plt.xticks(rotation=45)
+
+for stock in portfolio:
+  get_dividend(stock)
+
+# Difference between arithmetic mean (Average) and geometric mean (Annualized)
+# The arithmetic mean is calculated by adding all the numbers and dividing by the count of that series of numbers.
+# The geometric mean is calculated by taking the product of these numbers and raising it to the inverse series length of the series.
+
+# For example, if x and y are two numbers, the arithmetic mean is (x+y)/2 and the geometric mean is (xy)^(1/2).
+
+# The geometric mean is used when you're interested in:
+# - One investment over many years
+# - Multi-period returns, with compounding
+
+# The arithmetic mean is used when you're interested in:
+# - Many investments over one year
+# - Single period forecasts
+
+### Risk
+
+#### Beta value of each stock
+
+Beta value of a stock is used to signify risk i.e. if a stock is risky or not. By comparing the stock movement
+relative to the overall market such as the S&P 500, the stock can be classified as risky or not. By definition, the market
+has a beta value of 1.0. If the beta value of the stock is greater than 1.0, then it is classified as risky and less so if the
+value is less than 1.0.
+
+#function to calculate beta value of stock
+
+def calculate_beta(ticker):
+
+    #get data for ticker and SPY whih serves as the market index
+    symbols = [ticker,'SPY']
+    data = yf.download(symbols, start = start_date,end = end_date)['Adj Close']
+    price_change = data.pct_change()
+    price_change.drop(price_change.index[0],inplace=True)
+
+    #reshape for linear regression
+    X = np.array(price_change[ticker]).reshape((-1,1))
+    y = np.array(price_change['SPY'])
+
+    #create splits
+    X_train,X_test,y_train,y_test = train_test_split(X,y)
+    lr = LinearRegression()
+    lr.fit(X_train,y_train)
+
+    #predictions
+    y_preds = lr.predict(X_test)
+
+    #plot
+    fig,ax = plt.subplots(figsize=(5,5));
+    ax.plot(X_test,y_preds,linestyle=':',color='orange')
+    ax.scatter(y_test,y_preds,alpha=0.5)
+    ax.set_title(f' Beta value {lr.coef_}')
+    ax.set_xlabel('Market Index:SPY')
+    ax.set_ylabel(f'{ticker}')
+
+for stock in portfolio:
+  calculate_beta(stock)
+
+#### Portfolio Risk
+
+Portfolio risk can be calculated using the covariance matrix.Portfolio variance takes into account individual variance, weights and their correlation.
+
+The risk of a portfolio is not simply the weighted variance of the individual assets. Since the stocks are correlated,
+it becomes more complicated. The correlation between assets tell us how they move related to each other.Hence, the risk calculated should also account for the correlation.
+
+The standard deviation of a portfolio is a measure of its risk or volatility. It quantifies how much the returns of the portfolio tend to deviate from the average (mean) return over a specific time period. A higher standard deviation indicates greater volatility, while a lower standard deviation suggests lower volatility.
+
+def covariance(portfolio):
+  #covariance matrix
+  #get daily_returns
+  weights = np.array([0.25,0.25,0.25,0.25])
+  daily_returns = portfolio_df.pct_change()
+
+  #annulaize volatility by x'ing it with 250 which is the number of trading days in a year
+  cov_matrix = daily_returns.cov() * 250
+  cov_df = pd.DataFrame(cov_matrix.values.diagonal()*100,index=portfolio,columns=['covariance %'])
+
+  #correlation
+  corr = daily_returns.corr()
+
+  #calculate portfolio variance
+  port_variance = np.dot(weights.T, np.dot(cov_matrix, weights)) #formula
+  port_variance = round(port_variance*100,1)
+  # print(str(port_variance) +"%")
+
+  #calculate portfolio std dev
+  #For the variance calculation, we square the weights and the variances.
+  #Because of this squaring, the variance is no longer in the same unit of measurement as the original data.
+  #Taking the root of the variance means the standard deviation is restored to the original unit of measure and therefore much easier to interpret.
+  port_stdev = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))
+  # print(str(round(port_stdev,1)*100) +"%")
+  port_stdev = round(port_stdev*100,1)
+  # print(str(port_stdev) +"%")
+
+  #plotting results
+  fig,(ax1,ax2,ax3) = plt.subplots(nrows=1,ncols=3,figsize=(20,5))
+  plt.subplots_adjust(wspace=0.5)
+  cov_df.plot(kind='bar',ax=ax1);
+  sns.heatmap(corr,annot=True,cmap='viridis',ax=ax2)
+  ax2.set_title('Correlation Matrix')
+
+  ax3.annotate(f'Portfolio Standard Deviation: {port_stdev}%',xy=(0.005,0.5),fontsize=15);
+  ax3.axis('off');
+
+covariance(portfolio)
+
+From, the matrix it is clear to see that GE (17.3%) is the most volatile stock compared to the others.
+
+#### Interpreting risk
+
+The high standard deviation of 23.4% signifies that the portfolio has experienced significant price or return fluctuations. These fluctuations can be both positive and negative, and they can be substantial. Investors with a lower risk tolerance may find such volatility concerning.
+
+On the flip side, despite the high-risk profile, the portfolio has generated an impressive return of 135% over the 5 year period.
+
+Hence, the interpretation of the portfolio's risk depends upon the investor.  Investors with a higher risk tolerance may be more comfortable with the portfolio's volatility if it leads to higher returns, while those with lower risk tolerance may find the risk level less acceptable.
+
+A key factor in this is the investor's time horizon. If the investment horizon is long-term, such as for retirement planning, the portfolio's performance over 5 years, with its associated risk, might be acceptable. However, for short-term goals, the high volatility may pose a greater risk.
+
+
+
+In summary, a portfolio standard deviation of 23.4% indicates significant volatility and risk, while the cumulative return of 135% over 5 years indicates strong performance. The interpretation of this data depends on your individual investment goals, risk tolerance, and time horizon. It's essential to carefully consider the risk-return tradeoff and whether the portfolio aligns with your financial objectives and risk comfort level.
+
+#### Viewing returns
+
+Mean and standard deviation are only useful when the distribution is symmetrical. But often in the real world, distributions are often asymmetrical. In such cases, skewness and kurtosis are measures that can help shed more light about the nature of the distribution.
+
+Skewness describes whether the distribution is asymmetrical i.e. if it leans towards the left(positive) or the right(negative).
+
+Suppose plot the daily returns of the portfolio it is left-skewed(positive), it the means the most of the returns are the lesser than the mean which obviously would not be good for us!
+
+- Skewness between -0.5 and 0.5 means that the data are pretty symmetrical
+- Skewness between -1 and -0.5 (negatively skewed) or between 0.5 and 1 (positively skewed) means that the data are moderately skewed.
+- Skewness smaller than -1 (negatively skewed) or bigger than 1 (positively skewed) means that the data are highly skewed.
+
+Kurtosis deals with the lengths of tails in the distribution or measures of outliers present in the distribution.
+
+If the distribution of the returns has high kurtosis, it means that most of the returns are at the extreme ends thus implying high fluctuations, which again will not be good for us.
+
+- A normal distribution has a kurtosis of 3.
+- A distribution with kurtosis < 3 means that the tails are shorter and thinner than a normal distribution and the presence of fewer ouliers in the data.
+- When the kurtosis > 3 , it implies the opposite.
+
+Let's plot a histogram of the returns of the S&P 500 and compare them with the returns of the portfolio:
+
+# plotting histogram of returns
+
+def hist_returns(portfolio):
+    #set up plotting
+    fig,(ax1,ax2) = plt.subplots(nrows=1,ncols=2,figsize=(15,5))
+    plt.subplots_adjust(wspace=0.5)
+
+    #get returns of the portfolio
+    returns = portfolio_df.pct_change()
+    portfolio_returns = returns.dot(weights)
+
+    #plot the returns
+    ax1.hist(sp_500['daily_returns'],bins=50); # S&P 500
+    ax2.hist(portfolio_returns,bins=50); # portfolio
+
+    ax1.set_title('Returns of S&P 500');
+    ax2.set_title('Returns of Portfolio');
+
+
+hist_returns(portfolio)
+
+## Modern Portfolio Theory
+
+The modern portfolio theory (MPT) is a practical method for selecting investments in order to maximize their overall returns within an acceptable level of risk. This mathematical framework is used to build a portfolio of investments that maximize the amount of expected return for the collective given level of risk.
+
+American economist Harry Markowitz pioneered this theory in his paper "Portfolio Selection," which was published in the Journal of Finance in 1952.
+He was later awarded a Nobel Prize for his work on modern portfolio theory.
+
+A key component of the MPT theory is diversification. Most investments are either high risk and high return or low risk and low return. Markowitz argued that investors could achieve their best results by choosing an optimal mix of the two based on an assessment of their individual tolerance to risk.
+
+Source: [Modern Portfolio Theory](<a href="https://urldefense.com/v3/__https://www.investopedia.com/terms/m/modernportfoliotheory.asp__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNT4h6BJfA$">https://www.investopedia.com/terms/m/modernportfoliotheory.asp</a>)
+
+### PyPortfolioOpt
+
+PyPortfolioOpt is a library that implements portfolio optimization methods, including classical mean-variance optimization techniques and Black-Litterman allocation, as well as more recent developments in the field like shrinkage and Hierarchical Risk Parity.
+
+More information can be found [here](<a href="https://urldefense.com/v3/__https://pyportfolioopt.readthedocs.io/en/latest/UserGuide.html__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNSr676PzQ$">https://pyportfolioopt.readthedocs.io/en/latest/UserGuide.html</a>) and [here](<a href="https://urldefense.com/v3/__https://github.com/robertmartin8/PyPortfolioOpt*an-overview-of-classical-portfolio-optimization-methods__;Iw!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNThKKJu4Q$">https://github.com/robertmartin8/PyPortfolioOpt#an-overview-of-classical-portfolio-optimization-methods</a>)
+
+We will be using PyPortfolioOpt to optimize our portfolio.
+
+pip install pyportfolioopt
+
+#import relevant libraries
+from pypfopt.efficient_frontier import EfficientFrontier
+from pypfopt import risk_models
+from pypfopt import expected_returns
+
+#efficient frontier needs the expected returns (mu) and the covariance matrix (sigma)
+
+#using mean_historical_return.
+#Calculate annualised mean (daily) historical return from input (daily) asset prices
+#default is the geometric mean
+mu = expected_returns.mean_historical_return(portfolio_df)
+mu
+
+#sample_cov
+#better option is to use the shrinkage estimator i.e Ledoit Wolf.
+#even the docs suggest that. the sample cov sufferes from lack of robustness and misspecifcation
+# but for smiplicity sake, we'll use it here.
+sigma = risk_models.sample_cov(portfolio_df)
+sigma
+
+### Efficient Frontier
+
+is a graphical representation of portfolio risk(standard deviation) vs return.
+
+- At every level of return, investors can create a portfolio that offers the lowest possible risk.
+- For every level of risk, investors can create a portfolio that offers the highest return.
+
+- Any portfolio that falls outside the Efficient Frontier is considered sub-optimal for one of two reasons: it carries too much risk relative to its return, or too little return relative to its risk.
+
+
+
+![mpt.JPG](data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4RFgRXhpZgAATU0AKgAAAAgABAE7AAIAAABPAAAISodpAAQAAAABAAAImpydAAEAAACeAAAQuuocAAcAAAgMAAAAPgAAAAAc6gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEtyaXNobmFuLCBSYWh1bCAgICAgICAgICAgICAgICAgICAgICAgICAgIEV4cG9ydCBMaWNlbnNlIFJlcXVpcmVkIC0gVVMgQ29sbGlucwAAAAHqHAAHAAAIDAAACKwAAAAAHOoAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEsAcgBpAHMAaABuAGEAbgAsACAAUgBhAGgAdQBsACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAEUAeABwAG8AcgB0ACAATABpAGMAZQBuAHMAZQAgAFIAZQBxAHUAaQByAGUAZAAgAC0AIABVAFMAIABDAG8AbABsAGkAbgBzAAAA/+EKp2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4NCjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iPjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iLz48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+PGRjOmNyZWF0b3I+PHJkZjpTZXEgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOmxpPktyaXNobmFuLCBSYWh1bCAgICAgICAgICAgICAgICAgICAgICAgICAgIEV4cG9ydCBMaWNlbnNlIFJlcXVpcmVkIC0gVVMgQ29sbGluczwvcmRmOmxpPjwvcmRmOlNlcT4NCgkJCTwvZGM6Y3JlYXRvcj48L3JkZjpEZXNjcmlwdGlvbj48L3JkZjpSREY+PC94OnhtcG1ldGE+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/eHBhY2tldCBlbmQ9J3cnPz7/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUaGRgVGBcbHichGx0lHRcYIi4iJSgpKywrGiAvMy8qMicqKyr/2wBDAQcICAoJChQLCxQqHBgcKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKir/wAARCAIOAzgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6RooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiioZbqKCSNJZFVpG2oCeppNpbgTUUDmimAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFADJJVijZ3OFUZJPavNdc1mTUdW8+JiqRH91jt71veMda8tP7Pt2+ZuZSOw9K4uvls2xjlL2MNluYzl0R6doGrrqunK5/1yfLIPf1rVry7QtVbStSWQk+U3yyD2r02GVJolkjO5WGQR3r1suxaxFKz+JblwldElFFFemWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF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fc16hGgRAqgADgAdq58fioVUoQO3KMDUoN1aml+g6iiivKPoQooooAKKKKACkIzS0UAZ13oGk38m++0+2nf+9JECfzqza2FrYxeVZ28UCf3Y0Cj9KsUU3JtWbIUIp3S1EAxS0UUiwooooAKKKKACiiigAooooADzSbaWigBNtLiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAQjNGKWigBMUYpaKAExS0UUAQXv8Ax4z/APXNv5V5G33j9a9cvf8Ajxn/AOubfyryNvvH618znnxQ+ZjUO88D/wDIGk/66n+VdOK5jwP/AMgaT/rqf5V04r2cB/u0PQ0j8IVyPjixLwQ3iL9w7XPt2rrqgvbWO8s5IJRlZFwavFUPb0ZQG1dWPJY5GilWRDhlORXqek3yahpsU6HJIww9DXmN7aSWN7LbyjDRtj6+9a/hbWf7OvvJmbEExwc/wn1r5jLcQ8NX9nPRPT5mEHyvU9FppXNKGDDKnIpa+xOgTFKKKKACs7Vte07RLfztTukgTtuPJ+g71emkEUTO3CqCTXzb4n1648Q65PdzOTHuIhTPCr2rrwuGdeVr6I8zMMd9Ugmlds9fj+K/hh7jyzPOgz99oTtrrbLULXUbZbixnSeJujocivlqu0+GviKfSfEsNo0jG1u22OhPAPY134jL4xhzU3seTg85nOqoVkrM96ooorxT6kKKKKACiiopru3tl3XE8cS+rsB/OgTaW5LRUEF9aXX/AB7XMU3+44P8qnzRsCaewUUUUDCiiigAooooAK5DxJrEtp4kt7NtXk023eAuWjhVyzZ9wa6+sHU9H1CbXYtS024gjZIjEVmQsDk9eKAG3uvNpFhFKYZr+IR73uN6Iceu0kZPsBTv+El8+9S302xnvTsWSVkZVEat0zuPJ9hWdqfhO+1G4uJZLi2Y3UIjcvFuMRx1TPSrdr4evtMvFm066iw8Ucc6yoTnaMZGKYilZ+Kbm2a9a7s7me3hujG04KgRg9BjOTj2roNW1eLSrFJ3jkmaRwkUceNzseg5qg/hx30m9szOM3U3m7tv3eQcfpVv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v/THy63qc9xdHSrSCS3tGKyNK5DOR1C4psviSeX+zl0y1WV75WI8xsCPHrSHTtW0+W9i02OCaC7cuGkkKmInrxjmpLTQJbO60oxsrR2aOJCTyS2OlL3Cr1b21/p9PkFteXmpNf6VqkUcNzHGCHgY7WDdCM8g1b8L3sl7oUbTndLGxjc+pU4zUUsD2Gr6hqs23yGt1VQDzlc0/wAJ2stroMfngrJKzSlT23HNS7cuhpDmU0n5/wDANqiiisjqCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBCqkglQSOhx0paKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEKhhhgCPQil6dKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z)
+
+[Source:Guided Choice Investments](<a href="https://urldefense.com/v3/__https://guidedchoice.com/modern-portfolio-theory/__;!!MvWE!A8D_jcz9THgiMXgFsXMRvyYcgjSYKFhsDBtsLLrfeoCrX24cQF5tnVpx8eat9vHSIrZxytGZ2FcSWhMtzNQv6uf3VQ$">https://guidedchoice.com/modern-portfolio-theory/</a>)
+
+#### Efficient Frontier for Max Sharpe
+
+The Sharpe Ratio is a measure of risk-adjusted performance for an investment or a portfolio. Simply put, the Sharpe Ratio calculates the excess return per unit of risk. A higher Sharpe Ratio indicates a better risk-adjusted performance. Investors generally prefer investments or portfolios with higher Sharpe Ratios because they provide a better return for the amount of risk taken.
+
+#calculate the efficient frontier
+ef1 = EfficientFrontier(mu,sigma)
+ef1.max_sharpe()
+
+#this is performance of max_sharpe
+perf = ef1.portfolio_performance(risk_free_rate=0.04)
+
+#assemble into a df for readability
+ef1_df = pd.DataFrame(perf,index=['Expected annual return %','Annual volatility %','Sharpe Ratio'],columns=['max_sharpe'])
+ef1_df = ef1_df.apply(lambda x : round((100*x),2))
+ef1_df
+
+#get the optimal weights for each asset
+cleaned_weights_1 = dict(ef1.clean_weights())
+cleaned_weights_1
+
+#### Efficient Frontier for Min Volatility
+
+#min volatility
+#optimizes for minimum volatility.returns asset weights for least risk
+ef2 = EfficientFrontier(mu,sigma)
+ef2.min_volatility()
+
+#this is performance for min_volatility
+perf = ef2.portfolio_performance(verbose=True,risk_free_rate=0.04)
+
+#assemble into a df for readability
+ef2_df = pd.DataFrame(perf,index=['Expected annual return %','Annual volatility %','Sharpe Ratio'],columns=['min_volatility'])
+ef2_df = ef2_df.apply(lambda x : round((100*x),2))
+ef2_df
+
+#get the optimal weights for each asset
+cleaned_weights_2 = dict(ef2.clean_weights())
+cleaned_weights_2
+
+#put everything together
+ef_df = pd.concat([ef1_df,ef2_df],axis=1)
+ef_df
+
+### How to optimally allocate the money based on the weights?
+
+Based on the weights, latest price and amount invested, the next step is to ensure that the amount invested is maximized for each asset's allocated weight.
+
+For eg. if the stock price of GE is \$100 and the total amount invested is \$1000, per the allocation, we have to invest 4.8% in GE which equates to \$48.
+
+We use the DiscreteAllocation class for this. It prioritzies buying shares of the asset that is furthest away from the allocation i.e if the portfolio calls for bying 10 shares of an asset, but with the allocation we have only 10 shares, the other asset allocations are sacrificed to reduce the gap. This way, the left over money is minimized.
+
+#### Max Sharpe
+
+from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
+
+#use latest_prices to get the last row for the latest prices from the df od stock prices
+latest_prices = get_latest_prices(portfolio_df)
+
+#use DA to get the allocation and left over money using the optimal weights
+da = DiscreteAllocation(cleaned_weights_1, latest_prices, total_portfolio_value=1800)
+
+allocation, leftover = da.greedy_portfolio()
+#verbose = True will o/p the allocated weights and desired weigths and also the RMSE between the two
+
+#allocation - dictionary of the ticket and the number of shares to buy
+print(allocation, '\n')
+
+#leftover - balance money after investing
+print(round(leftover,2))
+
+# need to create a df for allocation and figure out a way to get the multiple index df to sum it up
+
+#### Min Volatility
+
+from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
+
+#use latest_prices to get the last row for the latest prices from the df od stock prices
+latest_prices = get_latest_prices(portfolio_df)
+
+#use DA to get the allocation and left over money using the optimal weights
+da = DiscreteAllocation(cleaned_weights_2, latest_prices, total_portfolio_value=1800)
+
+allocation, leftover = da.greedy_portfolio()
+#verbose = True will o/p the allocated weights and desired weigths and also the RMSE between the two
+
+#allocation - dictionary of the ticket and the number of shares to buy
+print(allocation, '\n')
+
+#leftover - balance money after investing
+print(round(leftover,2))
+
+# print('S&P 500 skewness and kurtosis:')
+# print(round(sp_500['daily_returns'].skew(),2))
+
+# print('Portfolio skewness and kurtosis:')
+# print(round(portfolio_returns.skew(),2))
+# print(round(portfolio_returns.kurtosis(),2))
+
+## Future price prediction - Time Series Modeling
+
+Now that we have some insight on each stock and how to optimally build a portfolio, the next step is to predict future performance of the stocks that we want for our portfolio.
+
+To make predictions, we will build a series of time-series models and select the model with the least RMSE.
+
+### Stationarity Check
+
+Time series models are usually built on the premise that models are stationary i.e there are patters to the data and by analyzing these patterns, future performance can be predicted with a degree of certainity. However, this rarely happens in real life. There is always some trend or seasonality or a combination of both in the data.Hence the first step is to check for stationarity.
+
+The function below plots rolling-statistics and the ouptut of the Dickey-Fuller test
+
+def plot_trends(ticker):
+    df = yf.download(ticker,start=start_date,end=end_date)
+    close = df.loc[:,['Adj Close']]
+
+#compute rolling mean and std to see if they are constant
+    roll_mean = close.rolling(window=30,center=False).mean()
+    roll_std = close.rolling(window=30,center=False).std()
+
+#plot the data
+    fig,ax=plt.subplots(figsize=(15,5))
+    ax.plot(close,color='blue',label='Original')
+    ax.plot(roll_mean,color='red',label='Rolling Mean')
+    ax.plot(roll_std,color='green',label='Rolling StdDev')
+    ax.legend(loc='best')
+    ax.set_title(f'Rolling Statistics of {ticker}');
+
+#dickey Fuller Test
+    dftest = adfuller(close['Adj Close'])
+    dfoutput = pd.DataFrame(dftest[0:4], index=['Test Statistic', 'p-value', '#Lags Used', 'Number of Observations Used'],columns=['Values'])
+
+    return dfoutput
+
+plot_trends('AAPL')
+
+By computing the rolling mean we can see that there is an upward trend in the data signifying non-stationarity. However, since the rolling stddev is fairly straight, we can say that there is not much seasonality in the data. Also shown is the results of the **Dickey-Fuller** test, a statistical method to check for stationarity. The large p-value points means we fail to reject the null-hypothesis which states the data is non-stationary.
+
+### Convert non-stationary to stationary
+
+def differencing(ticker):
+    df = yf.download(ticker,start=start_date,end=end_date)
+    df_return = df[['Adj Close']]
+    df_diff =df_return.diff(periods=1)
+    df_diff.dropna(inplace=True)
+
+    #plot the results
+    fig,ax = plt.subplots(figsize = (12,5));
+    ax.plot(df_diff, label = 'Differenced');
+
+    ax.plot(df_diff.rolling(30).mean(),label = 'Rolling Mean')
+    ax.plot(df_diff.rolling(30).std(),label = 'Rolling StdDev')
+    ax.set_title(f'Differenced plot of {ticker}')
+    ax.legend(loc=2);
+
+    #dickey fuller test
+    dftest = adfuller(df_diff['Adj Close'])
+    dfoutput = pd.DataFrame(dftest[0:4], index=['Test Statistic', 'p-value', '#Lags Used', 'Number of Observations Used'],columns=['Values'])
+
+    return dfoutput
+
+differencing('AAPL')
+
+By simply taking the difference, we can remove non-stationarity from the data set. We can see from the above plot that the mean though not perfectly flat is fairly linear signifying that we have removed the trend.
+Since the p-value from the Dickey-Fuller is lesser than the significance value, we can reject the null-hypothesis and thus conclude that the data is now stationary.
+
+### ARIMA model
+
+We will first build and integrated AR and MA model known as ARIMA.
+
+- ARIMA stands for AutoRegressive Integrated Moving Average.
+- The AR component refers to the AutoRegressive component and models the relationship between the current value in a time series and its previous values.
+- The I stands for integrated and refers to the differencing of the time series data that is used to make stationary.
+- The MA component refers to the moving average component. This component models the relationship between the current value in the time series and the past forecast errors. It considers how past prediction errors affect the current observation.
+
+####  ACF and PACF
+
+Since the ARIMA model is a linear regression model, we need to decide on how many regression terms we will use for the model. The Auto-Correlation and Partial Auto Correlation plot(for the AR and MA models respectively) will show the number of lag terms that have the most effect on future price.
+
+#get stock data
+df = yf.download('AAPL',start=start_date,end=end_date)
+df_close = df[['Adj Close']]
+df_diff =df_close.diff(periods=1)
+df_diff.dropna(inplace=True)
+
+#plot ACF and PACF values
+fig,(ax1,ax2)=plt.subplots(nrows=2,figsize=(12,8))
+acf = plot_acf(df_diff,ax=ax1)
+pacf = plot_pacf(df_diff,ax=ax2)
+
+From both the plots, we can see that the 1st lag term i.e the previous day's stock price,for both the AR and MA component, will have the most effect on the next day's price. There are other terms that have an effect as well, but for the sake of simplicity we will use only one term for the model.
+
+Next, we define the train and test sets for modeling. Unlike classification models where can randomly select data for each set, for time series data, we define a percentage of data for the train and test set respectively. Here, we select 75% of the data for train and 25% as test.
+
+#defining train and test sets
+cutoff= int(df_close.shape[0]*0.75)
+train = df_close[:cutoff]
+test = df_close[cutoff:]
+
+#### setting up the ARIMA model
+
+Parameters for the model: **(p,d,q)=(1,1,1)** for the model based on the plots:
+
+1. p = number of terms for the AR model - from the ACF plot
+2. d = order of differencing - used to make the data stationary
+3. q = numer of the terms for the MA model - from the PACF plot
+
+# (1,1,1) ARIMA(p,d,q) based on ACF and PACF plots
+#instantiate
+model = ARIMA(train,
+              order=(1,1,1))
+
+#fit
+model_fit = model.fit()
+# print(model_fit.summary())
+
+#getting predictions using get_prediction method
+arima_predictions = model_fit.get_prediction(start = len(train)+1 , end = len(df_close),dynamic=True)
+#predicted_mean gives lists the values
+arima_pred_price=arima_predictions.predicted_mean
+#converting into a df
+arima_pred_price_df = pd.DataFrame(data=arima_pred_price)
+#seetting the index to the test dates
+arima_pred_price_df.index= test.index
+
+# arima_pred_price_df.head()
+
+#confidence intervals of predictions
+arima_conf_int = arima_predictions.conf_int()
+arima_conf_int.set_index(test.index,inplace=True)
+
+# arima_conf_int.head()
+
+#plotting predictions with confidence intervals
+fig,ax =plt.subplots(figsize=(10,5))
+# ax.plot(train,label='Train');
+ax.plot(test,label='Test');
+ax.plot(arima_pred_price_df,label='Predictions');
+# ax.plot(arima_conf_int,label='Confidence Intervals')
+# ax.fill_between(arima_conf_int.index,arima_conf_int.iloc[:,0],arima_conf_int.iloc[:,1],color='k',alpha=0.1);
+ax.legend(loc=2);
+ax.set_title('ARMIA model');
+
+#RMSE and AIC
+error_arima = round(np.sqrt(mean_squared_error(test,arima_pred_price_df)),2)
+aic_arima = round(model_fit.aic,2)
+print(f'AIC score of the ARIMA model is {aic_arima}')
+print(f'RMSE of the model is ${error_arima}')
+
+
+From the plot we can tell that the model does not perform very well when compared to the test values.
+From the RMSE score, we can quantify the performance and say the mean prediction of the model is off by \\$20.02, clearly not very good.
+
+### SARIMA model
+
+Next, we will build a SARIMA model. Like the ARIMA models, SARIMA model also depends on past values but has an extra seasonality component to take into account any seasonality patterns
+
+the the p,d,q values from the ARIMA models as a guide, we can run different combinations to check for the most optimal paramenters. The model that outputs the lowest AIC score , will be used as our model
+
+#defining a range for the p,d,q values
+p=d=q=range(0,2)
+pdq = list(itertools.product(p,d,q))
+pdqs = [(x[0], x[1], x[2], 12) for x in list(itertools.product(p, d, q))]
+
+# Run a grid with pdq and seasonal pdq parameters calculated above and get the best AIC value
+ans = []
+for comb in pdq:
+    for combs in pdqs:
+        try:
+            mod = SARIMAX(train,
+                          order=comb,
+                          seasonal_order=combs,
+                          enforce_stationarity=False,
+                          enforce_invertibility=False)
+
+            output = mod.fit()
+            ans.append([comb, combs, output.aic])
+#             print('SARIMA {} x {}: AIC Calculated={}'.format(comb, combs, output.aic))
+        except:
+            continue
+#instead of printing, put everything in a df
+sari_df = pd.DataFrame(ans,columns=['(p,d,q)','seasonal_combo', 'AIC'])
+#get the row with the least AIC
+aic_min = sari_df[sari_df['AIC']==sari_df['AIC'].min()]
+aic_min
+
+# Plug the optimal parameter values into a new SARIMAX model
+sarimax = SARIMAX(train,
+                  order=(0,1,1),
+                  seasonal_order=(0,1,1,12),
+                  enforce_stationarity=False,
+                  enforce_invertibility=False)
+
+# Fit the model and print results
+output = sarimax.fit()
+
+#get predictions
+sarimax_predictions = output.get_prediction(start=len(train)+1,end=len(df_close),dynamic=True)
+sarimax_price=sarimax_predictions.predicted_mean
+sarimax_predictions_df = pd.DataFrame(data=sarimax_price)
+sarimax_predictions_df.index= test.index
+
+#get confidence intervals
+sarimax_conf_int = sarimax_predictions.conf_int()
+sarimax_conf_int.set_index(test.index,inplace=True)
+
+#plot results
+fig,ax =plt.subplots(figsize=(10,5))
+# ax.plot(train,label='Train');
+ax.plot(test,label='Test');
+ax.plot(sarimax_predictions_df,label='Predictions');
+# ax.plot(sarimax_conf_int,label='Confidence Intervals')
+# ax.fill_between(sarimax_conf_int.index,sarimax_conf_int.iloc[:,0],sarimax_conf_int.iloc[:,1],color='g',alpha=0.1);
+ax.legend(loc=2);
+
+#RMSE
+error_sarima = round(np.sqrt(mean_squared_error(test,sarimax_predictions_df)),2)
+print(f'RMSE of the model is ${error_sarima}')
+
+Compared to the ARIMA model, the SARIMA model performance is much worse.
+
+### Facebook Prophet
+
+The Prophet model is an additive model for time series predicting that was open sourced by Meta in 2017. According to the official documentation, it works best with time series that have strong seasonal effects and several seasons of historical data  Prophet is robust to missing data and shifts in the trend and typically handles outliers well.
+
+Using 'AAPL' to build and test a Prophet model:
+
+# #get stock data
+# df = yf.download('AAPL',start=start_date,end=end_date)
+# df_close = df[['Adj Close']]
+
+# #resmapling by weekly
+# df_weekly = df_close.resample('W').mean()
+
+# #setting up df to be able to run Prophet
+
+# #reset index
+# df_weekly.reset_index(inplace=True)
+
+# #rename columns per prophet conventions
+# df_weekly.rename(columns={'Adj Close': 'y',
+#                          'Date':'ds'},inplace=True)
+
+# #set the date as the index
+# # df_close.set_index('ds',inplace=True)
+# # df_weekly.head()
+
+# #defining train and test sets
+# cutoff= int(df_weekly.shape[0]*0.75)
+# train = df_weekly[:cutoff]
+# test = df_weekly[cutoff:]
+
+# #instantiate
+# m = Prophet(seasonality_mode='multiplicative',
+#             weekly_seasonality=True,
+#             daily_seasonality = True,
+#             yearly_seasonality = True,
+#             interval_width=0.90,
+#            )
+
+# #fit
+# m.fit(train)
+
+# #forecasts - creating future dates using in built make_future_dataframe method
+# future = m.make_future_dataframe(periods=len(test),freq='W',include_history=False)
+
+# #predicting yhat
+# forecast = m.predict(future)
+
+# #creating a df of predicted values
+# forecast_values = forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']]
+
+# #set the index for the plots
+# forecast_values.set_index('ds',inplace=True)
+# test.set_index('ds',inplace=True)
+
+# #plotting results
+# fig,ax=plt.subplots(figsize=(10,5))
+# # ax.plot(train,label='Train')
+# ax.plot(test,label='Test')
+# # ax.plot(df_weekly,label='Current Price')
+# ax.plot(forecast_values['yhat'],label='Forecast')
+# # ax.fill_between(test.index,forecast_values['yhat_lower'],forecast_values['yhat_upper'],color='g',alpha=0.1);
+# ax.legend();
+
+
+#RMSE
+# error_fb = round(np.sqrt(mean_squared_error(test,forecast_values['yhat'])),2)
+# print(f'RMSE of the model is ${error_fb}')
+
+
+# #run a loop for different regularization values
+
+# seasonality_scale = [0.1, 0.2, 0.3, 0.4, 0.5]
+# changepoint_scale = [0.1, 0.2, 0.3, 0.4, 0.5]
+# errors = []
+# new_error_fb = None
+
+# for season in seasonality_scale:
+#     for changepoint in changepoint_scale:
+#         #instantiate
+#         m = Prophet(seasonality_mode='multiplicative',
+#                 weekly_seasonality=True,
+#                 daily_seasonality = True,
+#                 yearly_seasonality = True,
+#                 interval_width=0.90,
+#                 seasonality_prior_scale=season,
+#                 changepoint_prior_scale=changepoint
+#                )
+
+#         #fit
+#         m.fit(train)
+
+#         #forecasts - creating future dates using in built make_future_dataframe method
+#         future = m.make_future_dataframe(periods=len(test),freq='W',include_history=False)
+
+#         #predicting yhat
+#         forecast = m.predict(future)
+
+#         #getting only yhat values
+#         forecast_values = forecast[['ds', 'yhat']]
+
+#         #setting the index
+#         forecast_values.set_index('ds',inplace=True)
+
+#         #rmse values
+#         rmse = round(np.sqrt(mean_squared_error(test,forecast_values['yhat'])),3)
+#         errors.append(rmse)
+#         new_error_fb = min(errors)
+# #         print(f'seasonality_scale:{season}, changepoint_scale:{changepoint}, rmse:{rmse}')
+
+# print('----------------------------------------------')
+# print(f'Smallest RMSE after looping is ${new_error_fb}')
+# print(f'Original RMSE is ${error_fb}')
+
+#get stock data
+df = yf.download('AAPL',start=start_date,end=end_date)
+df_close = df[['Adj Close']]
+
+# resmapling by weekly
+df_weekly = df_close.resample('W').mean()
+
+df_weekly = df_weekly.diff(periods=1)
+df_weekly.dropna(inplace=True)
+
+#setting up df to be able to run Prophet
+#reset index
+df_weekly.reset_index(inplace=True)
+#rename columns per prophet conventions
+df_weekly.rename(columns={'Adj Close': 'y',
+                         'Date':'ds'},inplace=True)
+
+#defining train and test sets
+cutoff= int(df_weekly.shape[0]*0.75)
+train = df_weekly[:cutoff]
+test = df_weekly[cutoff:]
+
+#instantiate
+m = Prophet(seasonality_mode='multiplicative',
+            weekly_seasonality=True,
+            daily_seasonality = True,
+            yearly_seasonality = True,
+            interval_width=0.90,
+           )
+
+#fit
+m.fit(train)
+
+#forecasts - creating future dates using in built make_future_dataframe method
+future = m.make_future_dataframe(periods=len(test),freq='W',include_history=False)
+
+#predicting yhat
+forecast = m.predict(future)
+
+#creating a df of predicted values
+forecast_values = forecast[['ds', 'yhat']]
+
+#set the index for the plots
+forecast_values.set_index('ds',inplace=True)
+test.set_index('ds',inplace=True)
+
+#plotting results
+fig,ax=plt.subplots(figsize=(10,5))
+# ax.plot(train,label='Train')b
+ax.plot(test,label='Test')
+# ax.plot(df_weekly,label='Current Price')
+ax.plot(forecast_values['yhat'],label='Forecast')
+# ax.fill_between(test.index,forecast_values['yhat_lower'],forecast_values['yhat_upper'],color='g',alpha=0.1);
+ax.legend();
+
+
+#RMSE
+error_fb = round(np.sqrt(mean_squared_error(test,forecast_values['yhat'])),2)
+print(f'RMSE of the model is ${error_fb}')
+
+Here, we can see a vast improvement in model performance compared to before.
+
+#### Regularization
+
+We can try to optimize the model by running a loop for the seasonality and changepoint values.
+These are deciding how much to penalize seasonality and changepoints changes in the data i.e. if the values are small
+for the seasonality changes, then the effect of seasonal changes in the data is dampened and vice versa.
+
+#run a loop for different regularization values
+seasonality_scale = [0.1, 0.2, 0.3, 0.4, 0.5]
+changepoint_scale = [0.1, 0.2, 0.3, 0.4, 0.5]
+errors = []
+new_error_fb = None
+
+for season in seasonality_scale:
+    for changepoint in changepoint_scale:
+        #instantiate
+        m = Prophet(seasonality_mode='multiplicative',
+                weekly_seasonality=True,
+                daily_seasonality = True,
+                yearly_seasonality = True,
+                interval_width=0.90,
+                seasonality_prior_scale=season,
+                changepoint_prior_scale=changepoint
+               )
+
+        #fit
+        m.fit(train)
+
+        #forecasts - creating future dates using in built make_future_dataframe method
+        future = m.make_future_dataframe(periods=len(test),freq='W',include_history=False)
+
+        #predicting yhat
+        forecast = m.predict(future)
+
+        #getting only yhat values
+        forecast_values = forecast[['ds', 'yhat']]
+
+        #setting the index
+        forecast_values.set_index('ds',inplace=True)
+
+        #rmse values
+        rmse = round(np.sqrt(mean_squared_error(test,forecast_values['yhat'])),3)
+        errors.append(rmse)
+        new_error_fb = min(errors)
+#         print(f'seasonality_scale:{season}, changepoint_scale:{changepoint}, rmse:{rmse}')
+
+print('----------------------------------------------')
+print(f'Smallest RMSE after looping is {new_error_fb}')
+print(f'Original RMSE is {error_fb}')
+
+### Model performance comparisions
+
+fig,ax =plt.subplots(figsize=(5,5))
+ax.bar(x=['ARIMA', 'SARIMAX','PROPHET'],height=[error_arima,error_sarima,new_error_fb]);
+ax.set_title('RMSE score comparision');
+
+
+From the plot, we can see the prophet model clearly outshines the rest. Hence, we will use that for making predictions for our chose stock.
+
+### Using Prophet to get forecast of 'AAPL' for the next year
+
+Now that we have a model, we can make predictions of the next year:
+
+#get stock data
+df = yf.download('AAPL',start=start_date,end=end_date)
+df_close = df[['Adj Close']]
+
+# resmapling by weekly
+df_weekly = df_close.resample('W').mean()
+
+df_weekly_diff = df_weekly.diff(periods=1)
+df_weekly_diff.dropna(inplace=True)
+
+# setting up df to be able to run Prophet
+#reset index
+df_weekly_diff.reset_index(inplace=True)
+
+#rename columns per prophet conventions
+df_weekly_diff.rename(columns={'Adj Close': 'y',
+                         'Date':'ds'},inplace=True)
+
+
+#instantiate
+m = Prophet(seasonality_mode='multiplicative',
+            weekly_seasonality=True,
+            daily_seasonality = True,
+            yearly_seasonality = True,
+            interval_width=0.90,
+            seasonality_prior_scale = 0.4,
+            changepoint_prior_scale = 0.3
+           )
+
+#fit
+m.fit(df_weekly_diff)
+
+#forecasts - creating future dates using in built make_future_dataframe method
+future = m.make_future_dataframe(periods=52,freq='W',include_history=False)
+
+#predicting yhat
+forecast = m.predict(future)
+
+#creating a df of predicted values
+forecast_values = forecast[['ds', 'yhat']]
+
+#set the index for the plots
+forecast_values.set_index('ds',inplace=True)
+df_weekly_diff.set_index('ds',inplace=True)
+
+
+#taking the inverse difference of the predicted values to get the original values
+# the inverse diff is the cumsum of the first value of the org series & the first differences series
+forecast_values.rename(columns={'yhat':'y'},inplace=True)
+invdiff = np.r_[df_weekly['Adj Close'].iloc[-1],forecast_values['y'][1:]].cumsum()
+invdiff_df = pd.DataFrame(data=invdiff,index = forecast_values.index,columns=['y'])
+
+#plotting results
+fig,ax=plt.subplots(figsize=(10,5))
+ax.plot(df_close,label='Current Price')
+ax.plot(invdiff_df['y'],label='Forecast')
+ax.set_title('Predicted performance of AAPL')
+ax.legend();
+
+## Building Portfolio
+
+### Predictions of chosen stock
+
+Following function is used to plot past and forecast prices for stocks in the portfolio:
+
+def plot_forecast_price(portfolio):
+
+    price_df = pd.DataFrame()
+    for stock in portfolio_df:
+        #get stock data
+        stock_price = pd.DataFrame(portfolio_df[stock])
+#         df = yf.download(ticker,start=start_date,end=end_date)
+#         df_close = df[['Adj Close']]
+
+        #resmapling by weekly
+        df_weekly = stock_price.resample('W').mean()
+        df_weekly_diff = stock_price.diff(periods=1)
+        df_weekly_diff.dropna(inplace=True)
+
+        #setting up df to be able to run Prophet
+        #reset index
+        df_weekly_diff.reset_index(inplace=True)
+        #  rename columns per prophet conventions
+        df_weekly_diff.rename(columns={stock : 'y',
+                                 'Date':'ds'},inplace=True)
+
+
+        #instantiate
+        m = Prophet(seasonality_mode='multiplicative',
+                    weekly_seasonality=True,
+                    daily_seasonality = True,
+                    yearly_seasonality = True,
+                    interval_width=0.90,
+                    seasonality_prior_scale = 0.4,
+                    changepoint_prior_scale = 0.3
+                   )
+
+        #fit
+        m.fit(df_weekly_diff)
+
+        #forecasts - creating future dates using in built make_future_dataframe method
+        future = m.make_future_dataframe(periods=52,freq='W',include_history=False)
+
+        #predicting yhat
+        forecast = m.predict(future)
+
+        #creating a df of predicted values
+        forecast_values = forecast[['ds', 'yhat']]
+
+        #set the index for the plots
+        forecast_values.set_index('ds',inplace=True)
+        df_weekly_diff.set_index('ds',inplace=True)
+
+        #taking the inverse difference of the predicted values to get the original values
+        # the inverse diff is the cumsum of the first value of the org series & the first differences series
+        forecast_values.rename(columns={'yhat':'y'},inplace=True)
+        invdiff = np.r_[df_weekly[stock].iloc[-1],forecast_values['y'][1:]].cumsum()
+        invdiff_df = pd.DataFrame(data=invdiff,index = forecast_values.index,columns=['y'])
+        
+        price_df = pd.concat([price_df,invdiff_df],axis=1)
+
+        #plotting results
+        fig,ax=plt.subplots(figsize=(10,5))
+        ax.plot(df_weekly,label='Current Price')
+        ax.plot(invdiff_df['y'],label='Forecast')
+        ax.set_title(f'Predicted values of {stock}')
+        ax.legend();
+        
+    price_df.columns = portfolio
+    
+    return price_df
+        
+
+forecast_portfolio = plot_forecast_price(portfolio)
+
+### Predictions of portfolio
+
+ #getting the  retuns using pct_change
+  returns = portfolio_df.pct_change()
+
+  #calculate daily cumulative return for the portfolio by taking the dot product
+  # for eg: first row: (0.099*0.25) + (0.01519*0.25) + (-0.041*0.5) = -0.0493
+  #this way you calulate daily cumulative return
+  portfolio_returns = returns.dot(weights)
+
+  # from the daily cumulative returns, you calculate total cumulative return
+  portfolio_cum_returns = (1+portfolio_returns).cumprod()
+
+  #multiply the cumulative return by 1000 get get hypothetical growth
+  portfolio_cum_returns['growth'] = portfolio_cum_returns*1000
+
+# def plot_forecast_price(ticker):
+#     #get stock data
+#     df = yf.download(ticker,start=start_date,end=end_date)
+#     df_close = df[['Adj Close']]
+
+#     #resmapling by weekly
+#     df_weekly = df_close.resample('W').mean()
+#     df_weekly_diff = df_weekly.diff(periods=1)
+#     df_weekly_diff.dropna(inplace=True)
+
+
+#     #setting up df to be able to run Prophet
+#     #reset index
+#     df_weekly_diff.reset_index(inplace=True)
+#     #rename columns per prophet conventions
+#     df_weekly_diff.rename(columns={'Adj Close': 'y',
+#                              'Date':'ds'},inplace=True)
+
+
+#     #instantiate
+#     m = Prophet(seasonality_mode='multiplicative',
+#                 weekly_seasonality=True,
+#                 daily_seasonality = True,
+#                 yearly_seasonality = True,
+#                 interval_width=0.90,
+#                 seasonality_prior_scale = 0.4,
+#                 changepoint_prior_scale = 0.3
+#                )
+
+#     #fit
+#     m.fit(df_weekly_diff)
+
+#     #forecasts - creating future dates using in built make_future_dataframe method
+#     future = m.make_future_dataframe(periods=52,freq='W',include_history=False)
+
+#     #predicting yhat
+#     forecast = m.predict(future)
+
+#     #creating a df of predicted values
+#     forecast_values = forecast[['ds', 'yhat']]
+
+#     #set the index for the plots
+#     forecast_values.set_index('ds',inplace=True)
+#     df_weekly_diff.set_index('ds',inplace=True)
+
+
+#     #taking the inverse difference of the predicted values to get the original values
+#     # the inverse diff is the cumsum of the first value of the org series & the first differences series
+#     forecast_values.rename(columns={'yhat':'y'},inplace=True)
+#     invdiff = np.r_[df_weekly['Adj Close'].iloc[-1],forecast_values['y'][1:]].cumsum()
+#     invdiff_df = pd.DataFrame(data=invdiff,index = forecast_values.index,columns=['y'])
+
+#     #plotting results
+#     fig,ax=plt.subplots(figsize=(12,8))
+#     ax.plot(df_weekly,label='Current Price')
+#     ax.plot(invdiff_df['y'],label='Forecast')
+#     ax.set_title(f'Predicted values of {ticker}')
+#     ax.legend();
+
+
+
+# plot_forecast_price('AMZN')
+
+Following functions is to get the current price of a stock:
+
+# def get_current_price(ticker):
+#     df = yf.download(ticker,start=start_date)
+#     ticker_df = df[['Adj Close']]
+#     current_price = round(float(ticker_df.iloc[0]),2)
+
+#     return current_price
+
+Following function is to get the last forecasted price of the stock:
+
+# Previous_Date = datetime.datetime.today() - datetime.timedelta(days=1)
+# print (Previous_Date)
+
+# def get_future_price(ticker):
+#      #get stock data
+#     df = yf.download(ticker,start=start_date,end=end_date-datetime.timedelta(days=1))
+#     df_close = df[['Adj Close']]
+
+#     #resmapling by weekly
+#     df_weekly = df_close.resample('W').mean()
+#     df_weekly_diff = df_weekly.diff(periods=1)
+#     df_weekly_diff.dropna(inplace=True)
+
+
+#     #setting up df to be able to run Prophet
+#     #reset index
+#     df_weekly_diff.reset_index(inplace=True)
+#     #rename columns per prophet conventions
+#     df_weekly_diff.rename(columns={'Adj Close': 'y',
+#                              'Date':'ds'},inplace=True)
+
+
+#     #instantiate
+#     m = Prophet(seasonality_mode='multiplicative',
+#                 weekly_seasonality=True,
+#                 daily_seasonality = True,
+#                 yearly_seasonality = True,
+#                 interval_width=0.90,
+#                 seasonality_prior_scale = 0.4,
+#                 changepoint_prior_scale = 0.3
+#                )
+
+#     #fit
+#     m.fit(df_weekly_diff)
+
+#     #forecasts - creating future dates using in built make_future_dataframe method
+#     future = m.make_future_dataframe(periods=52,freq='W',include_history=False)
+
+#     #predicting yhat
+#     forecast = m.predict(future)
+
+#     #creating a df of predicted values
+#     forecast_values = forecast[['ds', 'yhat']]
+
+#     #set the index for the plots
+#     forecast_values.set_index('ds',inplace=True)
+#     df_weekly_diff.set_index('ds',inplace=True)
+
+#     #taking the inverse difference of the predicted values to get the original values
+#     # the inverse diff is the cumsum of the first value of the org series & the first differences series
+#     forecast_values.rename(columns={'yhat':'y'},inplace=True)
+#     invdiff = np.r_[df_weekly['Adj Close'].iloc[-1],forecast_values['y'][1:]].cumsum()
+#     invdiff_df = pd.DataFrame(data=invdiff,index = forecast_values.index,columns=['y'])
+
+#     #get the last value
+#     last_price = round(float(invdiff_df.iloc[-1]),2)
+
+#     return last_price
+
+The `portfolio` function combines all of the above and outputs the total returns
+
+# #putting it all together
+
+# def portfolio(amount,stocks):
+#     amount = amount
+#     stocks = stocks
+#     break_up = round(amount/len(stocks),2)
+#     current_prices = []
+#     future_prices = np.array([])
+#     n_shares = np.array([])
+#     return_pct = np.array([])
+
+#     for st in stocks:
+
+#         cp = get_current_price(st)
+#         fp = get_future_price(st)
+#         current_prices.append(cp)
+#         future_prices = np.append(future_prices,fp)
+
+#         print(f'Current price of {st} is {cp}')
+#         print(f'Forecast price of {st} is {fp}')
+
+#         def check():
+#             for i in current_prices:
+#                 if i < break_up:
+#                        continue # there is nothing below continue to ignore. so nothing happens and continue moves the loop forward
+#                 else: # once the outer loop reaches the value of nflx and the condition is true, what is below is executed
+#                     return ('Invest amount per stock is too low. Please adjust')
+#                     break #breaks the inner loop
+#                 break #this break is to ignore the outer loop as well as there is no point in moving forward
+
+#     check()
+
+#     if check() == None:
+#         for i in current_prices:
+#             share_buy = round(break_up/i)
+#             n_shares = np.append(n_shares,share_buy)
+#         sell_amounts = n_shares*future_prices
+#         returns = sell_amounts/break_up - 1
+#         invest_amt = round(break_up/amount,2)
+#         return_pct = np.append(return_pct,returns*invest_amt)
+#         cum_returns = round(np.sum(return_pct) * 100,2)
+#         print('\n')
+#         print(f'Amount invested in each stock: ${break_up}')
+#         print(f'Cumulative returns: {cum_returns}%')
+
+#     else:
+#         print('\n')
+#         print(f'Amount invested in each stock: ${break_up}')
+#         print('Investment is too low')
+#         print('Please pick a different stock or increase investment')
+
+As outlined earlier, following is an example of how diversification works
+
+If an investor is chooses to invest only in the automotive companies, here's what that would look like:
+
+# # Tesla,General Motors and Ford
+# portfolio(1000,['TSLA','GM','F'])
+
+The investor can expect to lose money if he/she were to invest $1000 in Tesla,GM and Ford in the next year.
+
+Now, let's diversify and choose companies from different sectors:automotive,tech and health care
+
+# #General Motors, Apple, Pfizer
+# portfolio(1000,['GM','AAPL','PFE'])
+
+From the above examples, it is quiet clear to see the benefit of diversifying.
+
+# # very little investment
+# portfolio(50,['GM','AAPL','PFE'])
+
+## Conclusions
+
+### Limitations
+
+1. All the models are purely mathematical models and cannot take into account black swan events.
+2. More sophisticated models using Deep Learning can be built to get more accurate forecasts.
+3. Dividend data is not incorporated while calculating overall returns.
+4. Currently, the invested amount is distributed equally amongst all the stocks.
+   The amounts can be tuned based on the investor's appetite for risk.
+
+### Recommendations
+
+1. By plugging in amounts and companies in the model, the investor can play around and maximize his/her returns.
+
+2. Looking at the stock market in general, there was a drastic spike around 2020.
+   There has not been a decline to pre-2020 levels and hence, it might be prudent to collect past data only
+   from 2020 onwards rather than from all the way back to 2017.
+
+
