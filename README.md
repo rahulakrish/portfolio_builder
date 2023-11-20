@@ -208,6 +208,84 @@ Using the same intial amount of $1800, the recommended allocation would have no 
 
 For minimun volatility, we can see the difference in allocation when compared to the portfolio optimized for max_sharpe.
 
+# Conclusions
+
+1. All the models are purely mathematical models and cannot take into account black swan events.
+2. Obviously, the strnegth of the forecast is goverened by the model. SHown here is only a basic model with only historical stock price used to predict future price. Clearly, more features like volume of shares, yearly income etc. and other macro economic factors can be added and more sophisticated models developed to make more wholesome and accurate predictions.
+3. Similarly, the PyPfopt library optimization was done only for maximum sharpe and minimum volatility. There are more options that the user can play with to generate more portfolios.
+
+# Appendix
+
+### How to use the notebook:
+
+1. Assign stocks into the following line: `portfolio,portfolio_df = stocks('GE,JPM,MSFT,PG')`. In place of 'GE,JPM,MSFT,PG', put in stocks of your choice.
+
+2. Run the following functions to get historical portfolio data:
+
+> * `stock_performace(portfolio)` - plot performace of each stock in the portfolio from 2019 till date.
+
+> * `get_average_returns(portfolio)` - plot average return of the portfolio in comparision to the S&P 500.
+
+> * `get_ind_cum_return(portfolio)` - plot hypothetical growth of $1000 invested in each stock.
+
+> * `get_portfolio_cumulative_return(portfolio)` - plot hypothetical growth of $1000 invested in the portfolio.
+
+> * `get_dividend(portfolio)` - plot dividend data for each stock in the portfolio
+
+> * `calculate_beta(portfolio)` - plot each stock in the portfolio
+
+> * `covariance(portfolio)` - plot portfolio risk
+
+> * `hist_returns(portfolio)` - plot trends in the returns of the portfolio
+
+> * `sharpe_df,sharpe_weights = ef_max_sharpe(portfolio_df)` - efficient frontier optimizing for max sharpe value. `sharpe_df` will output portfolio performace and `sharpe_weights` will list out optimal allocation of \$1800 in the portfolio and also the leftover money.
+
+> * `vol_df,min_vol_weights = ef_min_volatility(portfolio_df)` - efficient frontier optimizing for min volatility.`vol_df` will output portfolio performance and `min_vol_weights` will list out optimal allocation.
+
+
+*The functions listed above only plot data based on historical performance and merely serve as a guide. The following functions are to predict future performance:*
+
+> * Assign ` forecast_portfolio = plot_forecast_price(portfolio)` and run.
+This will  plot future stock price for each stock in the portfolio based on historical stock price
+
+> * `returns_forecast(forecast_portfolio)` - plot future portfolio performance
+
+> * `forecast_sharpe(forecast_portfolio)` - output portfolio performance and allocation optimized for max sharpe value
+
+> forecast_volatility(forecast_portfolio) - output portfolio performance and allocation optimized for min volatility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Repository Structure
 
 ```
