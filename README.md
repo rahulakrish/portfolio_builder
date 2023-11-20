@@ -127,7 +127,7 @@ The Sharpe Ratio is a measure of risk-adjusted performance for an investment or 
 
 #### Efficient Frontier for Min Volatility
 
-![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/a6fe9cb2-76cd-4449-a8c9-d92589834925)
+![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/68f75157-053d-40dc-90f5-663e2fd50342)
 
 We can see how the two approaches produce different results. PyPortfolioOpt offers more options to customize a portfolio.
 
