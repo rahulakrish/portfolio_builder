@@ -123,6 +123,8 @@ is a graphical representation of portfolio risk(standard deviation) vs return.
 
 - Any portfolio that falls outside the Efficient Frontier is considered sub-optimal for one of two reasons: it carries too much risk relative to its return, or too little return relative to its risk.
 
+PyPfOpt has different constraints for portfolio build but for now, let's look at two options : a portfolio for maximum Sharpe value and one that minimizes volatility.
+
 #### Efficient Frontier for Max Sharpe
 
 The Sharpe Ratio is a measure of risk-adjusted performance for an investment or a portfolio. Simply put, the Sharpe Ratio calculates the excess return per unit of risk. A higher Sharpe Ratio indicates a better risk-adjusted performance. Investors generally prefer investments or portfolios with higher Sharpe Ratios because they provide a better return for the amount of risk taken.
@@ -133,7 +135,7 @@ The Sharpe Ratio is a measure of risk-adjusted performance for an investment or 
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/e275341e-7c9e-4457-a1fe-5230c57102d3)
 
-We can see how the two approaches produce different results. PyPortfolioOpt offers more options to customize a portfolio.
+We can see how the two approaches produce different results.
 
 ### How much to invest and how to divvy it all up?
 
@@ -141,7 +143,7 @@ Based on the weights, latest price and amount invested, the next step is to ensu
 
 For eg. if the stock price of GE is \$100 and the total amount invested is \$1000, per the allocation, we have to invest 4.8% in GE which equates to \$48.
 
-We use the DiscreteAllocation class for this. It prioritzies buying shares of the asset that is furthest away from the allocation i.e if the portfolio calls for bying 10 shares of an asset, but with the allocation we have only 10 shares, the other asset allocations are sacrificed to reduce the gap. This way, the left over money is minimized.
+We can use the DiscreteAllocation class for this. It prioritzies buying shares of the asset that is furthest away from the allocation i.e if the portfolio calls for bying 10 shares of an asset, but with the allocation we have only 6 shares, the other asset allocations are sacrificed to reduce the gap. This way, the left over money is minimized.
 
 We will be using \$1800 as an example and like earlier compare portfolios for max sharpe and min volatility.
 
@@ -155,11 +157,11 @@ Min Volatility
 
 # Future price prediction - Time Series Modeling
 
-Now that we have some insight on each stock and how to optimally build a portfolio, the next step is to predict future performance of the stocks that we want for our portfolio.
+Now that we have some insight on each stock and how to optimally build a portfolio, the next step is to predict future performance of the stocks that belong to the portfolio.
 
 To make predictions, we will build a series of time-series models and select the model with the least RMSE.
 
-We will be using 'AAPL' data for demonstrative purposes
+We will be using 'AAPL' data for demonstrative purposes.
 
 ### Stationarity Check
 
