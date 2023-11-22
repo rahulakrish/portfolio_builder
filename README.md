@@ -84,7 +84,7 @@ The standard deviation of a portfolio is a measure of its risk or volatility. It
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/3a8d7dd7-be57-4fe5-9f2c-293199d5222a)
 
-From, the matrix it is clear to see that GE (17.3%) is the most volatile stock compared to the others.
+From the plot, it is clear to see that GE (17.3%) is the most volatile stock compared to the others. Also, GE and JPM are highly co-related meaning their performances are  fairly similar . Ideally, we want to look for companies whose performances are not related. This helps further reduce risk help insulate the portfolio from market fluctations.
 
 #### Interpreting risk
 
@@ -135,7 +135,7 @@ The Sharpe Ratio is a measure of risk-adjusted performance for an investment or 
 
 We can see how the two approaches produce different results. PyPortfolioOpt offers more options to customize a portfolio.
 
-### How to optimally allocate the money based on the weights?
+### How much to invest and how to divvy it all up?
 
 Based on the weights, latest price and amount invested, the next step is to ensure that the amount invested is maximized for each asset's allocated weight.
 
