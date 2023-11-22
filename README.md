@@ -21,20 +21,24 @@ Optimal portfolio build will also be demonstrated using a principle called [Mode
 
 # EDA
 
-For demonstrative purposes, let's build a porfiolio of stock of the following companies: General Electric, J.P.Morgan, Microsoft and Prcter & Gamble.
+For demonstrative purposes, let's build a porfiolio of stock of the following companies: General Electric, J.P.Morgan, Microsoft and Procter & Gamble.
 
 ## Stock Performance
 
 ![Screenshot 2023-11-20 124528](https://github.com/rahulakrish/portfolio_builder/assets/108379254/79024d32-d8f7-4a54-b49c-c2a4cb569f9e)
 
+Perhaps unsurpisingly, MSFT posted the highest growth.
+
 ### Average Daily return
-Comparing the avaerage daily return of the portfolio against the S&P 500
+Comparing the avaerage daily return of the portfolio against the S&P 500:
 
 ![Screenshot 2023-11-20 124900](https://github.com/rahulakrish/portfolio_builder/assets/108379254/78d4806f-17dd-478f-95b5-b6fa7dac45cf)
 
+WE can see that the portfolio slightly out performs the S&P 500.
 
 ### Growth
-What if we invested $1000 in each stock at the beginning? What would the current value be? This will give the cumulative return of each stock
+Next, let's look at cumulative growth. Cumulative returns included compounded results of reinvesting interest, dividens and capital gains.
+This can be better understood by tracking an invesment of $1000 in each stock at the beginning and checking for the current value:
 
 ![Screenshot 2023-11-20 125050](https://github.com/rahulakrish/portfolio_builder/assets/108379254/6f91f7e0-6e1f-49d1-9256-90cd9b810610)
 
