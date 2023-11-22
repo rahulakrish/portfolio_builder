@@ -5,7 +5,7 @@ The aim here is to  provide the investor an overview of performance of each stoc
 
 This notebook is only serves as a demonstration and should not be miscontrued for financial advice. As with any investment, there is an element of risk and returns can never be guaranteed.
 
-Optimal portfolio build will also be demonstrated using a principle called [Modern Portfolio Theory](https://en.wikipedia.org/wiki/Modern_portfolio_theory), a model introduced by economist Harry Markowtiz in 1952.  MPT advocates for diversification : owning a portfolio of assets from different classes is less risky than holding a portfolio of similar assets. By owning stock from different sectors as opposed to concetrating on a single sector, an investor is less exposed to risk.
+Optimal portfolio build will also be demonstrated using a principle called [Modern Portfolio Theory](https://en.wikipedia.org/wiki/Modern_portfolio_theory), a model introduced by economist Harry Markowtiz in 1952.  The Modern Portfolio Theory (MPT) refers to an investment theory that allows investors to assemble an asset portfolio that maximizes expected return for a given level of risk. The theory assumes that investors are risk-averse; for a given level of expected return, investors will always prefer the less risky portfolio.
 
 [PyPortfoliOpt](https://pyportfolioopt.readthedocs.io/en/latest/) is a Python library that will be used for this purpose.
 
