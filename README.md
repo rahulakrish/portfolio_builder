@@ -167,11 +167,10 @@ We will be using 'AAPL' data for demonstrative purposes.
 
 Time series models are usually built on the premise that models are stationary i.e there are patters to the data and by analyzing these patterns, future performance can be predicted with a degree of certainity. However, this rarely happens in real life. There is always some trend or seasonality or a combination of both in the data.Hence the first step is to check for stationarity and then convert non-stationary to stationary data.
 
-
-![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/d9090df8-20d2-4853-9971-17d91cd5e5b1)
-
 By simply taking the difference, we can remove non-stationarity from the data set. We can see from the above plot that the mean though not perfectly flat is fairly linear signifying that we have removed the trend.
 Since the p-value from the Dickey-Fuller is lesser than the significance value, we can reject the null-hypothesis and thus conclude that the data is now stationary.
+
+![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/d9090df8-20d2-4853-9971-17d91cd5e5b1)
 
 ### Model predictions
 
@@ -193,11 +192,13 @@ Shown here is the predicted price of another stock in the portfolio: Procter & G
 
 ### Predictions of portfolio
 
+Next step is to predict portfolio performance:
+
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/e60992c3-25f3-482f-95db-8c144bc5134c)
 
 ### Applying Modern Portfolio Theory
 
-We now need to calculate the efficient frontier for max_sharpe and min_volatilty based on our predictions
+We now need to calculate the efficient frontier for max_sharpe and min_volatilty based on our predictions.
 
 #### Max Sharpe
 
@@ -213,10 +214,12 @@ Using the same intial amount of $1800, the recommended allocation would have no 
 
 For minimun volatility, we can see the difference in allocation when compared to the portfolio optimized for max_sharpe.
 
+By playing around with different stocks, investment amount and model constraints, we can generate different portfolios and choose that best fits our outlook.
+
 # Conclusions
 
 1. All the models are purely mathematical models and cannot take into account black swan events.
-2. Obviously, the strnegth of the forecast is goverened by the model. SHown here is only a basic model with only historical stock price used to predict future price. Clearly, more features like volume of shares, yearly income etc. and other macro economic factors can be added and more sophisticated models developed to make more wholesome and accurate predictions.
+2. Obviously, the strength of the forecast is goverened by the model. Shown here is only a basic model with only historical stock price used to predict future price. More features and more sophisticated models can developed to make more realistic and accurate predictions.
 3. Similarly, the PyPfopt library optimization was done only for maximum sharpe and minimum volatility. There are more options that the user can play with to generate more portfolios.
 
 # Appendix
