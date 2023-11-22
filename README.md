@@ -56,31 +56,31 @@ The S&P 500 in comparison has grown only 75%.
 
 ## Dividend History
 
-A Dividend is the distirbution's of the company's profit to it's shareholders. Not every company pays dividends. Companies can also choose to re-invest their profits for future growth than reward shareholders. For an investor, investing in a company that pays dividends is an easy way to earn extra income on top of their initial investment. Shown here is the dividend for MSFT
+A Dividend is the distirbution's of the company's profit to it's shareholders. Not every company pays dividends. Companies can also choose to re-invest their profits for future growth than reward shareholders. For an investor, investing in a company that pays dividends is an easy way to earn extra income on top of their initial investment. Shown here is the dividend for MSFT:
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/f242c9e3-9a40-45e6-8b2a-77b629d3ebfe)
 
-MSFT's rising dividend yield bodes well for investors.
+A history of rising dividend signifies strong performance, confidence in the future and bodes well for investors.
 
 ### Risk
 
 #### Beta Value
 
-Beta value of a stock is used to signify risk i.e. if a stock is risky or not. By comparing the stock movement
+Beta value of a stock is used to signify risk . By comparing the stock movement
 relative to the overall market such as the S&P 500, the stock can be classified as risky or not. By definition, the market
-has a beta value of 1.0. If the beta value of the stock is greater than 1.0, then it is classified as risky and less so if the
+has a beta value of 1.0. If the beta value of the stock is greater than 1.0, then it is classified as risky and not so if the
 value is less than 1.0. Shown here is the beta value of MSFT: 
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/59acc1db-7125-43f4-be0e-0afc2378eefe)
 
 #### Portfolio Risk
 
-Portfolio risk can be calculated using the covariance matrix.Portfolio variance takes into account individual variance, weights and their correlation.
+Portfolio risk can be calculated using the covariance matrix. Portfolio variance takes into account individual variance, weights and their correlation.
 
 The risk of a portfolio is not simply the weighted variance of the individual assets. Since the stocks are correlated,
-it becomes more complicated. The correlation between assets tell us how they move related to each other.Hence, the risk calculated should also account for the correlation.
+it becomes more complicated. The correlation between assets tell us how they move related to each other and therefore, the risk should also account for the correlation.
 
-The standard deviation of a portfolio is a measure of its risk or volatility. It quantifies how much the returns of the portfolio tend to deviate from the average (mean) return over a specific time period. A higher standard deviation indicates greater volatility, while a lower standard deviation suggests lower volatility.
+The standard deviation of a portfolio is a measure of its risk or volatility. It quantifies how much the returns of the portfolio tend to deviate from the average (mean) return over a specific time period. A higher standard deviation indicates greater volatility, and vice-versa.
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/3a8d7dd7-be57-4fe5-9f2c-293199d5222a)
 
