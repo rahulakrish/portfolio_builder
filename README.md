@@ -42,11 +42,11 @@ This can be better understood by tracking an invesment of $1000 in each stock at
 
 ![Screenshot 2023-11-20 125050](https://github.com/rahulakrish/portfolio_builder/assets/108379254/6f91f7e0-6e1f-49d1-9256-90cd9b810610)
 
-For MSFT, we can see that \$1000 invested in 2019 would've grown to approx. $3600, netting a cumulative return of approx. 260%!
+For MSFT, we can see that \$1000 invested in 2019 would've grown to approx. $3600, netting a cumulative return of nearly 260%!
 
 ### Portfolio Cumulative Return
 
-Now that we've seen how the individual stocks have performed over time, similarly, we now have to see how a portfolio of these socks would've performed and compare it to the S&P 500
+Now that we've seen how the individual stocks have performed over time, similarly, let's check how a portfolio of these stocks would've performed and compare it to the S&P 500:
 
 ![image](https://github.com/rahulakrish/portfolio_builder/assets/108379254/b788c675-1bd6-469f-b50c-3b1bbe5760e0)
 
